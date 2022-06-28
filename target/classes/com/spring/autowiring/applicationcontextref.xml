@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+   <context:annotation-config/>
+ 	    <bean id="car" class="com.spring.autowiring.Car">
+<property name="company" value= "mahindra"/>
+<property name="carName" value= "xuv700"/>
+
+</bean>
+<bean id="engine" class="com.spring.autowiring.Engine">
+<property name="engineType" value= "V engine"/>
+<property name="enginecapacity" value= "1000f" />
+</bean>
+       <!-- <bean id="car" class="com.spring.autowiring.Car">
+<constructor-arg value ="mahindra" type="String"/>
+<constructor-arg value ="xuv700" type="String"/>
+</bean>
+<bean id="engine" class="com.spring.autowiring.Engine">
+<constructor-arg value ="V engine" type="String"/>
+<constructor-arg value ="1000 cc" type="float"/>
+
+</bean>
+    -->
+ </beans>

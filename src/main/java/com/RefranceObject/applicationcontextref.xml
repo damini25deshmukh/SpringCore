@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	 <bean id="emp" class="com.RefranceObject.Emp" autowire="byName">
+<property name="id" value= "10"/>
+<property name="name" value= "ram"/>
+<!-- <property name="Address"><ref bean="add"/>
+</property>
+ -->
+</bean>
+<bean id="add" class="com.RefranceObject.Address">
+<property name="pin" value= "441206"/>
+<property name="city" value= "Bramhapuri"/>
+</bean>
+  <bean id="emp2" class="com.RefranceObject.Emp">
+<constructor-arg value ="10" type="int"/>
+<constructor-arg value ="ram" type="String"/>
+<constructor-arg ref="add"/>
+
+</bean>
+<bean id="add1" class="com.RefranceObject.Address">
+<constructor-arg value ="441206" type="int"/>
+<constructor-arg value ="mumbai" type="String"/>
+
+</bean>
+ 
+ </beans>
